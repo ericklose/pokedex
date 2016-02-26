@@ -216,6 +216,9 @@
                                             <constraint firstAttribute="height" constant="25" id="aea-fZ-sJX"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="LJ7-yh-6eP" eventType="touchUpInside" id="y8h-W3-Rrj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -409,7 +412,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="attackLbl" destination="gPf-dp-gbW" id="dNZ-cS-Mk1"/>
+                        <outlet property="currentEvoImg" destination="Nxj-dw-hW9" id="rlI-1I-RMK"/>
+                        <outlet property="defenseLbl" destination="2mv-5W-F9H" id="Zlt-m4-dFh"/>
+                        <outlet property="descriptionLbl" destination="EJq-p1-y0x" id="6oa-hw-e7b"/>
+                        <outlet property="evoLbl" destination="SBK-Yu-ATt" id="2f6-7r-ePz"/>
+                        <outlet property="heightLbl" destination="FK6-JR-NXV" id="xcZ-4p-4IX"/>
+                        <outlet property="mainImg" destination="nBe-Ra-9Gm" id="BMF-2F-j7V"/>
                         <outlet property="nameLbl" destination="FgT-gM-kZf" id="xrh-Eb-spr"/>
+                        <outlet property="nextEvoImg" destination="2hi-dZ-e3U" id="QCq-ao-9E5"/>
+                        <outlet property="pokedexLbl" destination="eFE-0g-UfU" id="3hk-5M-aUp"/>
+                        <outlet property="typeLbl" destination="qeg-90-8fn" id="56W-SY-NHY"/>
+                        <outlet property="weightLbl" destination="aHT-A2-XGV" id="zcm-D6-hiP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Xw-DX-eES" userLabel="First Responder" sceneMemberID="firstResponder"/>
