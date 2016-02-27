@@ -8,7 +8,6 @@
     <customFonts key="customFonts">
         <mutableArray key="pokemon.ttf">
             <string>PokemonSolidNormal</string>
-            <string>PokemonSolidNormal</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -40,40 +39,6 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aSr-5x-wVF">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uv3-7l-qOp">
-                                                <rect key="frame" x="230" y="0.0" width="140" height="35"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="AEL-gV-PQD"/>
-                                                    <constraint firstAttribute="width" constant="140" id="z5y-SP-T5m"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="27"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5G3-p0-stN">
-                                                <rect key="frame" x="560" y="8" width="32" height="35"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="32" id="6Qr-8j-Rsu"/>
-                                                    <constraint firstAttribute="height" constant="32" id="FWX-mH-Pe4"/>
-                                                </constraints>
-                                                <state key="normal" image="music"/>
-                                                <connections>
-                                                    <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PzI-fK-hbG"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="5G3-p0-stN" secondAttribute="trailing" constant="8" id="5Hu-t3-TkT"/>
-                                            <constraint firstItem="5G3-p0-stN" firstAttribute="top" secondItem="aSr-5x-wVF" secondAttribute="top" constant="12" id="Cee-nN-Iib"/>
-                                            <constraint firstItem="uv3-7l-qOp" firstAttribute="centerY" secondItem="aSr-5x-wVF" secondAttribute="centerY" id="LwH-P5-rbo"/>
-                                            <constraint firstAttribute="height" constant="55" id="UTy-2N-DiD"/>
-                                            <constraint firstItem="uv3-7l-qOp" firstAttribute="centerX" secondItem="aSr-5x-wVF" secondAttribute="centerX" id="ban-du-4z2"/>
-                                        </constraints>
-                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoU-m0-Qlz">
                                         <rect key="frame" x="560" y="8" width="32" height="35"/>
                                         <constraints>
@@ -116,9 +81,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="101" translatesAutoresizingMaskIntoConstraints="NO" id="txR-j9-IoJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="87"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2g-WX-gkn">
                                                     <rect key="frame" x="0.0" y="89" width="110" height="21"/>
                                                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -129,6 +91,9 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="101" translatesAutoresizingMaskIntoConstraints="NO" id="txR-j9-IoJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="87"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -177,7 +142,7 @@
                     <connections>
                         <outlet property="collection" destination="UZQ-hi-1qX" id="Mh5-HC-Jo0"/>
                         <outlet property="searchBar" destination="ydA-Ip-XEK" id="Kru-rg-Pg0"/>
-                        <segue destination="LJ7-yh-6eP" kind="showDetail" identifier="PokemonDetailVC" action="showViewController:sender:" id="RL8-dZ-sSr"/>
+                        <segue destination="LJ7-yh-6eP" kind="show" identifier="PokemonDetailVC" id="gWj-of-kFr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
