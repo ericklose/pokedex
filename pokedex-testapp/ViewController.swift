@@ -30,7 +30,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func initAudio() {
-        
         let path = NSBundle.mainBundle().pathForResource("music", ofType: "mp3")!
         
         do {
