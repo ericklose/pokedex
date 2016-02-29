@@ -208,6 +208,9 @@
                                             <segment title="Moves"/>
                                         </segments>
                                         <color key="tintColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="selectedBioOrMove:" destination="LJ7-yh-6eP" eventType="valueChanged" id="rCY-Mt-1lA"/>
+                                        </connections>
                                     </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aiw-lQ-477">
                                         <rect key="frame" x="0.0" y="49" width="560" height="120"/>
@@ -387,7 +390,9 @@
                         <outlet property="mainImg" destination="nBe-Ra-9Gm" id="BMF-2F-j7V"/>
                         <outlet property="nameLbl" destination="FgT-gM-kZf" id="xrh-Eb-spr"/>
                         <outlet property="nextEvoImg" destination="2hi-dZ-e3U" id="QCq-ao-9E5"/>
+                        <outlet property="nextEvolutionLvl" destination="SBK-Yu-ATt" id="qMS-kw-wC8"/>
                         <outlet property="pokedexLbl" destination="eFE-0g-UfU" id="3hk-5M-aUp"/>
+                        <outlet property="segmentedControl" destination="qrK-7r-hjU" id="kv6-Vw-klz"/>
                         <outlet property="typeLbl" destination="qeg-90-8fn" id="56W-SY-NHY"/>
                         <outlet property="weightLbl" destination="aHT-A2-XGV" id="zcm-D6-hiP"/>
                     </connections>

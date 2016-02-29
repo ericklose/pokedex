@@ -22,8 +22,8 @@ class PokemonDetailVC: UIViewController {
     @IBOutlet weak var evoLbl: UILabel!
     @IBOutlet weak var currentEvoImg: UIImageView!
     @IBOutlet weak var nextEvoImg: UIImageView!
-    
-    
+    @IBOutlet weak var nextEvolutionLvl: UILabel!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var pokemon: Pokemon!
     
@@ -34,6 +34,7 @@ class PokemonDetailVC: UIViewController {
         let img = UIImage(named: "\(pokemon.pokedexId)")
         mainImg.image = img
         currentEvoImg.image = img
+        print("Moves: \(pokemon.pokeMoves)")
         
         pokemon.downloadPokemonDetails { () -> () in
             //called when download done
@@ -43,7 +44,7 @@ class PokemonDetailVC: UIViewController {
     }
     
     func updateUI() {
-            descriptionLbl.text = pokemon.description
+        descriptionLbl.text = pokemon.description
         typeLbl.text = pokemon.type
         defenseLbl.text = pokemon.defense
         heightLbl.text = pokemon.height
@@ -64,12 +65,28 @@ class PokemonDetailVC: UIViewController {
             }
         }
         }
-    
-
 
     @IBAction func backButtonPressed(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    
+
+    @IBAction func selectedBioOrMove(sender: UISegmentedControl) {
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            //mainImg.hidden = false
+            descriptionLbl.text = pokemon.description
+        case 1:
+            //mainImg.hidden = true
+            descriptionLbl.text = pokemon.pokeMoves
+        default:
+            break;
+        }
+        
+    }
+    
     
 
 }

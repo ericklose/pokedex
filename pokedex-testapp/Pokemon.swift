@@ -22,6 +22,7 @@ class Pokemon {
     private var _nextEvolutionId: String!
     private var _nextEvolutionLvl: String!
     private var _pokemonUrl: String!
+    private var _pokeMoves: String!
     
     var description: String {
         get {
@@ -30,6 +31,13 @@ class Pokemon {
             }
             return _description
         }
+    }
+    
+    var pokeMoves: String {
+        if _pokeMoves == nil {
+            _pokeMoves = "nada"
+        }
+        return _pokeMoves
     }
     
     var type: String {
@@ -96,7 +104,6 @@ class Pokemon {
         return _pokedexId
     }
     
-    //"/api/v1/pokemon/1/"
     
     init(name: String, pokedexId: Int) {
         self._name = name
@@ -127,6 +134,19 @@ class Pokemon {
                 
                 if let defense = dict["defense"] as? Int {
                     self._defense = "\(defense)"
+                }
+                
+                if let moves = dict["moves"] as? [Dictionary<String, AnyObject>] where moves.count > 0 {
+                    if let name = moves[0]["name"] {
+                    self._pokeMoves = name.capitalizedString
+                    }
+                    if moves.count > 1 {
+                        for var x = 1; x < moves.count; x++ {
+                            if let name = moves[x]["name"] {
+                                self._pokeMoves! += ", \(name.capitalizedString)"
+                            }
+                        }
+                    }
                 }
                 
                 if let types = dict["types"] as? [Dictionary<String, String>] where types.count > 0 {
